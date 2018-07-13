@@ -17,6 +17,7 @@ mvn clean install wildfly:deploy
 1. Open Swagger (OpenAPI) url: ```http://<server>:<port>/RainyHills/```
 
 _Example: http://localhost:8080/RainyHills/_
+
 2. Select ```/api/rainy-hills/volume``` endpoint
 3. Click on ```Try it out``` button
 4. Define array in ```Request body``` field (JSON format)
