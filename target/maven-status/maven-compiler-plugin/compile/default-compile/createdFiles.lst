@@ -1,9 +1,0 @@
-test\task\rest\resource\model\RainyHillsResponse$Builder.class
-test\task\service\impl\RainyHillsServiceImpl.class
-test\task\rest\resource\model\RainyHillsRequest.class
-test\task\rest\resource\model\RainyHillsResponse$1.class
-test\task\rest\RainyHillsRestApplication.class
-test\task\rest\resource\exception\BaseExceptionMapper.class
-test\task\rest\resource\RainyHillsResource.class
-test\task\rest\resource\model\RainyHillsResponse.class
-test\task\service\RainyHillsService.class
