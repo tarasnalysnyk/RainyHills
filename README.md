@@ -9,7 +9,7 @@ REST based J2EE 7 solution for Rainy Hills problem.
 
 ###Build the artifact and deploy to the Wildfly
 ```
-mvn clean wildfly:deploy
+mvn clean install wildfly:deploy
 ```
 
 ## Testing instructions
