@@ -7,6 +7,7 @@ import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.servers.Server;
+import org.apache.log4j.Logger;
 import test.task.rest.resource.model.RainyHillsRequest;
 import test.task.rest.resource.model.RainyHillsResponse;
 import test.task.service.RainyHillsService;
@@ -18,6 +19,8 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.math.BigInteger;
+import java.util.Arrays;
 
 @Path("/rainy-hills")
 @Produces({MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML})
@@ -27,12 +30,10 @@ import javax.ws.rs.core.Response;
 )
 public class RainyHillsResource {
 
+    private Logger logger = Logger.getLogger(RainyHillsResource.class);
+
     @Inject
     private RainyHillsService rainyHillsService;
-
-    public RainyHillsResource() {
-        // default constructor
-    }
 
     @POST
     @Path("/volume")
@@ -49,9 +50,12 @@ public class RainyHillsResource {
     public Response volume(
             @Parameter(description = "Array of integer numbers. The array describes profile of a surface",
                     required = true) RainyHillsRequest request) {
+        logger.info("Calculating volume for array: " + Arrays.toString(request.getArray()));
+        BigInteger result = rainyHillsService.calculateVolume(request.getArray());
+        logger.info("Resulting volume: " + result);
         return Response.ok(
                 RainyHillsResponse.builder()
-                        .volume(rainyHillsService.calculateVolume(request.getArray()))
+                        .volume(result)
                         .build())
                 .build();
     }
