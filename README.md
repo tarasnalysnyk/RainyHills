@@ -5,7 +5,7 @@ REST based J2EE 7 solution for Rainy Hills problem.
 ### Prerequisites
 1. Maven 3 installed
 2. Java 8 installed
-3. Wildfly 13.0.0.Final installed
+3. Wildfly 13.0.0.Final installed and runned
 
 ###Build the artifact and deploy to the Wildfly
 ```
