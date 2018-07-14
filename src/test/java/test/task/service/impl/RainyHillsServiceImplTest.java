@@ -83,11 +83,11 @@ public class RainyHillsServiceImplTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void calculateVolumeWithZeroHills() {
-        Assert.assertEquals(BigInteger.valueOf(0), rainyHillsService.calculateVolume(new Integer[]{}));
+        rainyHillsService.calculateVolume(new Integer[]{});
     }
 
     @Test(expected = IllegalArgumentException.class)
     public void calculateVolumeWithNullValue() {
-        Assert.assertEquals(BigInteger.valueOf(0), rainyHillsService.calculateVolume(new Integer[]{1, null, 2, 4}));
+        rainyHillsService.calculateVolume(new Integer[]{1, null, 2, 4});
     }
 }
