@@ -40,30 +40,21 @@ public class RainyHillsServiceImpl implements RainyHillsService {
         Integer rightValue = array[rightIndex];
 
         while(!leftIndex.equals(rightIndex)) {
-
             if (leftValue >= rightValue) {
-
                 if (array[rightIndex - 1] < rightValue) {
                     volume = volume.add(
                             BigInteger.valueOf(rightValue).subtract(BigInteger.valueOf(array[--rightIndex])));
                 } else {
-                    rightIndex--;
-                    rightValue = array[rightIndex];
+                    rightValue = array[--rightIndex];
                 }
-
             } else {
-
                 if (array[leftIndex + 1] < leftValue) {
                     volume = volume.add(
-                            BigInteger.valueOf(leftValue).subtract(BigInteger.valueOf(array[leftIndex + 1])));
-                    leftIndex++;
+                            BigInteger.valueOf(leftValue).subtract(BigInteger.valueOf(array[++leftIndex])));
                 } else {
-                    leftIndex++;
-                    leftValue = array[leftIndex];
+                    leftValue = array[++leftIndex];
                 }
-
             }
-
         }
 
         return volume;
