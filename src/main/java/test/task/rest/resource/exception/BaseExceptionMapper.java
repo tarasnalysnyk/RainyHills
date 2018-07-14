@@ -9,7 +9,7 @@ import javax.ws.rs.ext.Provider;
 @Provider
 public class BaseExceptionMapper implements ExceptionMapper<Exception> {
 
-    private Logger logger = Logger.getLogger(BaseExceptionMapper.class);
+    private final Logger logger = Logger.getLogger(BaseExceptionMapper.class);
 
     @Override
     public Response toResponse(Exception exception) {

@@ -4,7 +4,7 @@ import io.swagger.v3.oas.annotations.media.Schema;
 
 import javax.xml.bind.annotation.XmlRootElement;
 
-@XmlRootElement(name = "RainyHillsRequest")
+@XmlRootElement
 public class RainyHillsRequest {
 
     private Integer[] array;

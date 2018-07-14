@@ -1,6 +1,7 @@
 package test.task.service.impl;
 
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 import test.task.service.RainyHillsService;
 
@@ -8,7 +9,12 @@ import java.math.BigInteger;
 
 public class RainyHillsServiceImplTest {
 
-    private RainyHillsService rainyHillsService = new RainyHillsServiceImpl();
+    private RainyHillsService rainyHillsService;
+
+    @Before
+    public void setUp() {
+        rainyHillsService = new RainyHillsServiceImpl();
+    }
 
     @Test
     public void calculateVolumeSanityTest1() {

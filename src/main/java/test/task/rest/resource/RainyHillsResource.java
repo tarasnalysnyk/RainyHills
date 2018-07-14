@@ -30,7 +30,7 @@ import java.util.Arrays;
 )
 public class RainyHillsResource {
 
-    private Logger logger = Logger.getLogger(RainyHillsResource.class);
+    private final Logger logger = Logger.getLogger(RainyHillsResource.class);
 
     @Inject
     private RainyHillsService rainyHillsService;

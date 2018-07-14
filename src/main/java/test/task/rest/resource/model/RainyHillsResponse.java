@@ -3,7 +3,7 @@ package test.task.rest.resource.model;
 import javax.xml.bind.annotation.XmlRootElement;
 import java.math.BigInteger;
 
-@XmlRootElement(name = "RainyHillsResponse")
+@XmlRootElement
 public class RainyHillsResponse {
 
     private BigInteger volume;
